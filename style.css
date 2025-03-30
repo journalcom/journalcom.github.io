@@ -6,13 +6,13 @@ body {
 }
 
 header {
-    background: #222;
-    color: white;
+    background: #000000;
+    color: rgb(0, 0, 0);
     padding: 15px;
 }
 
 nav a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 15px;
     font-size: 18px;
