@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 :root {
     --base-color: #DBDBDB;
@@ -18,7 +18,7 @@ body {
     background-color: var(--background-color);
     margin: 0 auto;
     padding: 0;
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Bebas Neue', sans-serif; /* Changed to Bebas Neue */
     font-size: 12.5px;
     color: var(--text-color);
     text-align: left;
@@ -26,10 +26,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif; /* Changed to Bebas Neue */
+    font-weight: bold; /* Bold weight for headers */
     font-size: 12.5px;
     margin: 0px;
     margin-top: 22px;
-    font-weight: bold;
     color: var(--text-color);
 }
 
@@ -166,13 +167,13 @@ input[type="text"], select, textarea {
     color: var(--text-color);
     caret-color: var(--text-color);
     font-size: 12.5px;
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Bebas Neue', sans-serif; /* Changed to Bebas Neue */
     line-height: 1.5;
 }
 
 input[type="submit"] {
     font-size: 12.5px;
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Bebas Neue', sans-serif; /* Changed to Bebas Neue */
     line-height: 1.5;
     cursor: pointer;
     color: var(--link-color);
@@ -210,7 +211,7 @@ pre {
     font-size: 12.5px;
     color: var(--text-color);
     line-height: 1.7 !important;
-    font-family: "Source Code Pro", monospace !important;
+    font-family: 'Bebas Neue', sans-serif !important; /* Changed to Bebas Neue */
 }
 
 .light-theme {
