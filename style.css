@@ -9,24 +9,9 @@
     --text-color: var(--base-color);
     --placeholder-color: var(--base-color);
     --link-color: #B38AFF;  /* Purple */
-    --code-color-1: #aaaaaa;
-    --code-color-2: #ffffcc;
-    --code-color-3: #F00000;  /* Red */
-    --code-color-4: #F0A0A0;
-    --code-color-5: #b38aff;
-    --code-color-6: #5ba711;
-    --code-color-7: #e4e477;
-    --code-color-8: #000080;
-    --code-color-9: #05ca05;
-    --code-color-10: #888888;
-    --code-color-11: #555555;
-    --code-color-12: #800080;
-    --code-color-13: #00d4d4;
-    --code-color-14: #00c1c1;
-    --code-color-15: #ed9d13;
-    --code-color-16: #1e90ff;
-    --code-color-17: #800000;
-    --code-color-18: #bbbbbb;
+    --button-color: #ffcc00; /* Gold (Wakanda inspired) */
+    --light-background: #fff;
+    --light-text: #000;
 }
 
 body {
@@ -61,6 +46,20 @@ a {
 a:hover {
     color: var(--background-color);
     background-color: var(--base-color);
+}
+
+button {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 10px;
+    font-size: 12.5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e6b800;
 }
 
 @media only screen and (max-device-width: 500px) {
@@ -153,14 +152,12 @@ footer {
 input, select, textarea {
     padding: 0;
     margin: 0;
-    appearance: none; /* Standard property */
-    -webkit-appearance: none; /* WebKit-specific property */
-    border-radius: 0; /* Standard property */
-    -webkit-border-radius: 0; /* WebKit-specific property */
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
     border: none;
 }
-
-
 
 input[type="text"], select, textarea {
     width: 100%;
@@ -214,4 +211,9 @@ pre {
     color: var(--text-color);
     line-height: 1.7 !important;
     font-family: "Source Code Pro", monospace !important;
+}
+
+.light-theme {
+    background-color: var(--light-background);
+    color: var(--light-text);
 }
