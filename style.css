@@ -1,28 +1,26 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
+    background-color: #111;
+    color: white;
 }
 
 header {
-    background: #000000;
-    color: rgb(0, 0, 0);
-    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
 }
 
 nav a {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
-    margin: 15px;
+    margin: 10px;
     font-size: 18px;
 }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-main {
-    padding: 20px;
+nav a:hover {
+    color: cyan;
 }
