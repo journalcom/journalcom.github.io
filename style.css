@@ -19,18 +19,18 @@ body {
     background-color: var(--background-color);
     margin: 0 auto;
     padding: 0;
-    font-family: "Noto Sans", sans-serif;  /* Noto Sans for body */
-    font-size: 16px; /* Reduced font size */
+    font-family: "Noto Sans", sans-serif; /* Body font changed to Noto Sans */
+    font-size: 12px; /* Font size reduced to 12px */
     color: var(--text-color);
     text-align: left;
-    line-height: 1.3; /* Reduced line-height */
+    line-height: 1.15; /* Line spacing reduced to 1.15 */
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Bebas Neue", sans-serif;  /* Bebas Neue for headers */
-    font-size: 24px; /* Reduced font size for headers */
+    font-family: "Bebas Neue", sans-serif; /* Headers font set to Bebas Neue */
+    font-size: 28px; /* Larger and bold for impact */
     margin: 0px;
-    margin-top: 18px; /* Reduced margin */
+    margin-top: 22px;
     font-weight: bold;
     color: var(--text-color);
 }
@@ -43,7 +43,7 @@ p, ul, ol {
 a {
     text-decoration: underline;
     color: var(--link-color);
-    font-size: 18px; /* Reduced font size */
+    font-size: 20px;
 }
 
 a:hover {
@@ -57,13 +57,13 @@ button {
 
 @media only screen and (max-device-width: 500px) {
     * {
-        font-size: 14px !important; /* Adjust font size for mobile */
+        font-size: 16px !important; /* Bigger for mobile */
     }
 }
 
 .container {
     width: 90%;
-    max-width: 750px; /* Adjusted width */
+    max-width: 800px; /* Increased width for better layout */
     margin-right: auto;
     margin-left: auto;
 }
@@ -72,22 +72,22 @@ p {
     word-wrap: break-word;
     word-break: break-word;
     white-space: pre-wrap;
-    margin-bottom: 8px; /* Reduced margin between paragraphs */
-    line-height: 1.3; /* Reduced line height for paragraphs */
+    margin-bottom: 10px; /* Adjusted margin between paragraphs */
+    line-height: 1.15; /* Reduced line height for paragraphs */
 }
 
 footer {
     color: var(--text-color);
     border-top: var(--border);
-    margin: 15px auto;
-    padding-top: 8px;
+    margin: 20px auto 15px;
+    padding-top: 10px;
     text-align: center;
-    font-size: 12px; /* Reduced font size */
+    font-size: 14px;
 }
 
 header {
-    margin-top: 20px;
-    margin-bottom: 8px;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 header p {
@@ -96,7 +96,7 @@ header p {
 }
 
 footer {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 ::selection {
@@ -117,12 +117,12 @@ footer {
 .menu {
     border-top: var(--border);
     border-bottom: var(--border);
-    margin-bottom: 20px; /* Reduced margin */
+    margin-bottom: 25px;
 }
 
 .menu ul {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     padding-left: 0px;
     list-style-type: none;
     text-align: left;
@@ -130,13 +130,13 @@ footer {
 
 .menu ul li {
     display: inline;
-    margin-right: 12px; /* Reduced margin */
+    margin-right: 15px;
 }
 
 .menu ul li a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 18px; /* Reduced font size */
+    font-size: 22px;
 }
 
 .menu ul li a:hover {
@@ -161,14 +161,14 @@ input[type="text"], select, textarea {
     background-color: var(--background-color);
     color: var(--text-color);
     caret-color: var(--text-color);
-    font-size: 16px; /* Reduced font size */
-    font-family: "Noto Sans", sans-serif;  /* Noto Sans for input text */
-    line-height: 1.3; /* Reduced line-height */
+    font-size: 18px;
+    font-family: "Bebas Neue", sans-serif;
+    line-height: 1.15; /* Reduced line-height */
 }
 
 input[type="submit"] {
-    font-size: 16px; /* Reduced font size */
-    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-family: "Bebas Neue", sans-serif;
     cursor: pointer;
     color: var(--link-color);
     background-color: var(--background-color);
@@ -189,7 +189,7 @@ textarea {
 
 .lineno {
     color: var(--code-color-1);
-    margin-right: 12px; /* Reduced margin */
+    margin-right: 15px;
 }
 
 figure.highlight {
@@ -202,10 +202,10 @@ pre {
     padding: 0;
     margin: 0;
     overflow: auto;
-    font-size: 16px; /* Reduced font size */
+    font-size: 18px;
     color: var(--text-color);
-    line-height: 1.3 !important; /* Reduced line height for code blocks */
-    font-family: "Noto Sans", sans-serif !important; /* Noto Sans for code blocks */
+    line-height: 1.15 !important; /* Reduced line height for code blocks */
+    font-family: "Bebas Neue", sans-serif !important;
 }
 
 .light-theme {
