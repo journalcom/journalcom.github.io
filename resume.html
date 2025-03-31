@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Utkarsh Sonawane</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Resume-specific tweaks */
+        .resume-header h1 { margin-bottom: 5px; }
+        .resume-header p { 
+            color: #B38AFF;
+            margin-top: 0;
+            font-size: 1.1em;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .section ul { 
+            text-align: left;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+        .section li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .section li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #B38AFF;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        @media (max-width: 600px) {
+            .two-column { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <header>
+            <nav class="menu">
+                <a href="index.html">home</a>
+                <a href="about.html">contact</a>
+                <a href="resume.html" class="active">resume</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="resume-header">
+                <h1>Utkarsh Sonawane</h1>
+                <div class="contact-info">
+                    <a href="mailto:utkarshsonawane67@gmail.com">utkarshsonawane67@gmail.com</a>
+                    <span>+971 582451478</span>
+                    <a href="https://www.linkedin.com/in/utkarsh-sonawane-0aa993280/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <strong>Delhi Private School, Dubai</strong> (CBSE)<br>
+                        <em>Grade 12</em>: Physics, Chemistry, Mathematics, English, Computer Science, Marketing<br>
+                        <em>Grade 10</em>: 91.3% aggregate (Top 5%)<br>
+                        IELTS Band 7.5 (Listening 8.5, Reading 8.0)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Awards & Honors</h2>
+                <ul>
+                    <li><strong>VoiceMath Competition</strong>: 3rd place internationally (2024)</li>
+                    <li><strong>Modern World Quiz</strong>: 2nd place nationally (2023)</li>
+                    <li><strong>Chess</strong>: Multiple tournament wins (FIDE 1540, chess.com top 0.5%)</li>
+                    <li><strong>school PIE Exam</strong>: Top 5% school recognition</li>
+                </ul>
+            </div>
+
+            <div class="section two-column">
+                <div>
+                    <h2>Technical Skills</h2>
+                    <ul>
+                        <li><strong>Programming</strong>: Python, SQL, JavaScript, HTML, Markdown</li>
+                        <li><strong>Tools</strong>: Git/GitHub, VS Code</li>
+                        <li><strong>Languages</strong>: English, Hindi, Marathi, Arabic</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Courses</h2>
+                    <ul>
+                        <li>McGill Personal Finance</li>
+                        <li>Telstra Cybersecurity</li>
+                        <li>Ethics of AI (Univ. of Helsinki)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Leadership & Projects</h2>
+                <ul>
+                    <li>
+                        <strong>Founder, Glimpse Newsletter</strong><br>
+                        Published 30+ articles, grew to 250+ subscribers, built website team
+                    </li>
+                    <li>
+                        <strong>GitHub Contributor</strong><br>
+                        400+ commits, fixed 70+ bugs in open-source projects
+                    </li>
+                    <li>
+                        <strong>Team Aether (Aerospace)</strong><br>
+                        Designed box-wing aircraft, won 1st place in school competition
+                    </li>
+                    <li>
+                        <strong>YouTube Channel manager (StickFilms Animations)</strong><br>
+                        40+ animated videos, 113K+ views, 450+ subscribers
+                    </li>
+                </ul>
+            </div>
+
+        </main>
+
+        <footer>
+            © 2025 Utkarsh Sonawane | All Rights Reserved
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
