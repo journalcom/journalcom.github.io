@@ -1,14 +1,12 @@
 // ===== TYPEWRITER EFFECT =====
 function typeWriter(text, element, speed = 30) {
     let i = 0;
-    element.innerHTML = "";
+    element.innerHTML = ""; // Clear existing content
     function typing() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
             i++;
             setTimeout(typing, speed);
-        } else {
-            element.classList.remove("typewriter"); // Remove cursor
         }
     }
     typing();
@@ -20,9 +18,9 @@ window.addEventListener("load", () => {
     
     // Apply typewriter to elements with class "auto-type"
     document.querySelectorAll(".auto-type").forEach(el => {
-        el.classList.add("typewriter");
-        typeWriter(el.textContent, el);
+        const text = el.textContent;
         el.textContent = ""; // Clear original text
+        typeWriter(text, el);
     });
 });
 

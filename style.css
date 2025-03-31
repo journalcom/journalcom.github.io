@@ -25,17 +25,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 3.5s steps(40, end);
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
 /* ===== NAVIGATION ===== */
 .menu {
     border-top: 1px dashed #DBDBDB;
