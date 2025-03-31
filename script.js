@@ -1,18 +1,26 @@
 // ===== PAGE TRANSITIONS =====
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
+  localStorage.setItem('loaded', 'true'); // Add this line
 });
 
-// Smooth link transitions (updated for subfolder support)
+// Update link transition code:
 document.querySelectorAll('a').forEach(link => {
-  // Skip external links and anchor links
-  if (link.hostname !== window.location.hostname || link.hash) return;
-  
+  if (link.target === "_blank" || link.hash) return;
   link.addEventListener("click", (e) => {
-      e.preventDefault();
-      document.body.classList.remove("loaded");
-      setTimeout(() => {
-          window.location.href = link.href;
-      }, 400);
+      // Only animate if coming from same origin
+      if (link.origin === window.location.origin) {
+          e.preventDefault();
+          document.body.classList.remove("loaded");
+          setTimeout(() => {
+              window.location.href = link.href;
+          }, 400);
+      }
   });
 });
+
+// Add this new code:
+if (localStorage.getItem('loaded') === 'true') {
+  document.body.classList.add("loaded");
+  localStorage.removeItem('loaded');
+}
