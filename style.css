@@ -78,16 +78,3 @@ body.loaded {
 html {
     background: #000; /* Prevents white flash */
 }
-
-#terminal-input span {
-    color: #B38AFF;
-}
-
-#command-input {
-    background: transparent;
-    border: none;
-    color: #DBDBDB;
-    font-family: 'Courier New', monospace;
-    width: 100%;
-    outline: none;
-}
