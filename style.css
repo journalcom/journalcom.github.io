@@ -23,7 +23,7 @@ body {
     font-size: 18px; /* Increased readability */
     color: var(--text-color);
     text-align: left;
-    line-height: 1.8;
+    line-height: 1.4; /* Reduced line-height */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -72,7 +72,8 @@ p {
     word-wrap: break-word;
     word-break: break-word;
     white-space: pre-wrap;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Adjusted margin between paragraphs */
+    line-height: 1.4; /* Reduced line height for paragraphs */
 }
 
 footer {
@@ -162,7 +163,7 @@ input[type="text"], select, textarea {
     caret-color: var(--text-color);
     font-size: 18px;
     font-family: "Bebas Neue", sans-serif;
-    line-height: 1.5;
+    line-height: 1.4; /* Reduced line-height */
 }
 
 input[type="submit"] {
@@ -203,7 +204,7 @@ pre {
     overflow: auto;
     font-size: 18px;
     color: var(--text-color);
-    line-height: 1.7 !important;
+    line-height: 1.4 !important; /* Reduced line height for code blocks */
     font-family: "Bebas Neue", sans-serif !important;
 }
 
