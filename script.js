@@ -1,40 +1,22 @@
-// Wait for the DOM content to be fully loaded
-document.addEventListener("DOMContentLoaded", function () {
+// ===== TYPEWRITER EFFECT =====
+document.addEventListener("DOMContentLoaded", function() {
+    // Fade-in for all pages
     const main = document.querySelector("main");
-    const body = document.body;
+    if (main) {
+        main.style.opacity = "0";
+        setTimeout(() => {
+            main.style.transition = "opacity 1s ease";
+            main.style.opacity = "1";
+        }, 300);
+    }
 
-    // Initial fade-in effect for the main content
-    main.style.opacity = "0";
-    main.style.transition = "opacity 1s ease-in-out";
-    setTimeout(() => {
-        main.style.opacity = "1";
-    }, 300);
-
-    // Smooth scroll effect for navigation links
-    const navLinks = document.querySelectorAll("a[href^='#']");
-    navLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = link.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-            }
-        });
+    // Active page highlight
+    const currentPage = location.pathname.split('/').pop();
+    document.querySelectorAll('.menu a').forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
     });
-
-    // Loading animation (could be like a Wakanda symbol or similar animation)
-    const loader = document.createElement("div");
-    loader.classList.add("loader");
-    loader.textContent = "Loading...";
-    document.body.appendChild(loader);
-
-    setTimeout(() => {
-        loader.style.display = "none";
-    }, 1500);  // Loader disappears after 1.5 seconds
-
-    console.log("Wakanda Forever! JavaScript is alive!");
 });
+
+console.log("website loaded.");
