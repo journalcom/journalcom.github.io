@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bold+Onse&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
 :root {
     --base-color: #DBDBDB;
@@ -19,7 +19,7 @@ body {
     background-color: var(--background-color);
     margin: 0 auto;
     padding: 0;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Noto Sans", sans-serif;  /* Noto Sans for body */
     font-size: 18px; /* Increased readability */
     color: var(--text-color);
     text-align: left;
@@ -27,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Bold Onse", sans-serif;
+    font-family: "Bebas Neue", sans-serif;  /* Bebas Neue for headers */
     font-size: 28px; /* Larger and bold for impact */
     margin: 0px;
     margin-top: 22px;
@@ -162,13 +162,13 @@ input[type="text"], select, textarea {
     color: var(--text-color);
     caret-color: var(--text-color);
     font-size: 18px;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Noto Sans", sans-serif;  /* Noto Sans for input text */
     line-height: 1.4; /* Reduced line-height */
 }
 
 input[type="submit"] {
     font-size: 18px;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     cursor: pointer;
     color: var(--link-color);
     background-color: var(--background-color);
@@ -205,7 +205,7 @@ pre {
     font-size: 18px;
     color: var(--text-color);
     line-height: 1.4 !important; /* Reduced line height for code blocks */
-    font-family: "Bebas Neue", sans-serif !important;
+    font-family: "Noto Sans", sans-serif !important; /* Noto Sans for code blocks */
 }
 
 .light-theme {
