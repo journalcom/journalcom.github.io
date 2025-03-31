@@ -1,7 +1,6 @@
 // Wait for the DOM content to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     const main = document.querySelector("main");
-    const themeToggleButton = document.getElementById("theme-toggle");
     const body = document.body;
 
     // Initial fade-in effect for the main content
@@ -10,18 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
         main.style.opacity = "1";
     }, 300);
-
-    // Theme toggle functionality
-    if (themeToggleButton) {
-        themeToggleButton.addEventListener("click", () => {
-            body.classList.toggle("light-theme");
-            if (body.classList.contains("light-theme")) {
-                console.log("Switched to Light Mode");
-            } else {
-                console.log("Wakanda Forever! Switched to Dark Mode");
-            }
-        });
-    }
 
     // Smooth scroll effect for navigation links
     const navLinks = document.querySelectorAll("a[href^='#']");
