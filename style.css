@@ -62,16 +62,8 @@ footer {
     font-size: 14px;
     opacity: 0.7;
 }
-/* ===== TYPEWRITER EFFECT ===== */
-.typewriter {
-    border-right: 2px solid #B38AFF; /* Cursor effect */
-    animation: blink 0.75s step-end infinite;
-}
 
-@keyframes blink {
-    from, to { border-color: transparent }
-    50% { border-color: #B38AFF; }
-}
+
 
 /* ===== PAGE TRANSITIONS ===== */
 body {
@@ -85,32 +77,6 @@ body.loaded {
 
 html {
     background: #000; /* Prevents white flash */
-}
-
-/* ===== TERMINAL CONSOLE ===== */
-#terminal {
-    background: #111;
-    border: 1px dashed #333;
-    padding: 15px;
-    margin: 40px auto 0;
-    max-width: 600px;
-    border-radius: 4px;
-}
-
-#terminal-output {
-    min-height: 60px;
-    font-family: 'Courier New', monospace;
-    color: #B38AFF;
-    margin-bottom: 10px;
-    white-space: pre-wrap;
-    line-height: 1.4;
-}
-
-#terminal-input {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-family: 'Courier New', monospace;
 }
 
 #terminal-input span {
