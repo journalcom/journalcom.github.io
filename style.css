@@ -205,6 +205,15 @@ pre {
     text-align: center; /* Centers code blocks */
 }
 
+/* Styling for the stars section */
+.stars {
+    text-align: center; /* Center-align the stars */
+    font-size: 36px; /* Adjust the font size of the stars */
+    color: var(--base-color); /* Use the base color for consistency */
+    margin-top: 50px; /* Add some margin above the stars */
+    margin-bottom: 20px; /* Add some margin below the stars */
+}
+
 .light-theme {
     background-color: var(--light-background);
     color: var(--light-text);
