@@ -139,3 +139,27 @@ body.konami-activated {
     z-index: 9998;
     transform: translate(-50%, -50%);
 }
+
+blockquote {
+    transition: all 0.3s ease; /* Smooth hover effects */
+    position: relative; /* For crown positioning */
+  }
+  
+  /* Sparkle effect for your personal quotes */
+  blockquote.personal-glow::after {
+    content: '✨';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  blockquote.personal-glow:hover::after {
+    opacity: 1;
+  }
+
+  blockquote.favorited {
+    background: #1a0a2e;
+    border-left: 4px solid #FFD43B;
+  }

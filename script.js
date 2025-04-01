@@ -67,3 +67,52 @@ document.addEventListener('visibilitychange', () => {
     setTimeout(() => document.title = originalTitle, 1500);
   }
 });
+
+document.querySelectorAll('blockquote').forEach(quote => {
+  // Double-click to highlight
+  quote.addEventListener('dblclick', () => {
+    // Create glowing effect
+    quote.style.transition = 'all 0.5s ease';
+    quote.style.boxShadow = '0 0 25px #B38AFF';
+    quote.style.transform = 'scale(1.02)';
+    
+    // Add temporary crown icon to your personal quotes
+    const author = quote.querySelector('footer').textContent;
+    if (author.includes('utkarsh')) {
+      const crown = document.createElement('span');
+      crown.innerHTML = '👑';
+      crown.style.position = 'absolute';
+      crown.style.right = '15px';
+      crown.style.top = '15px';
+      crown.style.fontSize = '1.5rem';
+      quote.style.position = 'relative';
+      quote.appendChild(crown);
+      
+      setTimeout(() => crown.remove(), 2000);
+    }
+    
+    // Auto-reset after 2 seconds
+    setTimeout(() => {
+      quote.style.boxShadow = 'none';
+      quote.style.transform = 'scale(1)';
+    }, 2000);
+  });
+  
+  // Bonus: Mouse enter/leave effects
+  quote.addEventListener('mouseenter', () => {
+    quote.style.borderLeft = '4px solid #9c72e6';
+  });
+  
+  quote.addEventListener('mouseleave', () => {
+    quote.style.borderLeft = '4px solid #B38AFF';
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'f') {
+    const hoveredQuote = document.querySelector('blockquote:hover');
+    if (hoveredQuote) {
+      hoveredQuote.classList.toggle('favorited');
+    }
+  }
+});
