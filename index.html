@@ -6,7 +6,6 @@
     <title>journal</title>
     <link rel="stylesheet" href="style.css">
     <style>
-
         .posts-container {
             max-width: 600px;
             margin: 0 auto;
@@ -22,12 +21,14 @@
             margin-bottom: 8px;
         }
 
-
         .welcome-text {
             font-size: 1.5rem;
             animation: flyIn 1.2s ease-out forwards;
             opacity: 0;
             transform: translateY(-30px);
+            text-align: center; /* Added this line to center the text */
+            display: block; /* Ensures proper centering */
+            margin: 0 auto 30px; /* Adds space below the welcome text */
         }
 
         @keyframes flyIn {
