@@ -1,5 +1,3 @@
-# utkarsh-sonawane.github.io
-### finished with some designs, still testing the interactive options
-### gonna write some posts rn
-### done with designs, now gonna work on content a bit more and explore some interactive elements
-### chatgpt-ied most of the content and now im convinced CS is dead
+# a digital space where i store some of my thoughts, kinda like a half journal, half secret garden.
+# there are easter eggs here too, dm me if you want to know more about them.
+# created this website purely from coding(most of it is chatgpt lol)
