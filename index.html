@@ -69,10 +69,11 @@
             { time: 21, text: "🌙 evenin'" },
             { time: 24, text: "💤 go sleep lil bich" }
         ];
-
-        const greeting = greetings.find(g => hour < g.time).text;
+    
+        const greeting = greetings.find(g => hour < g.time)?.text || "🌎 hello there!";
         
         document.getElementById('greeting').textContent = greeting;
     </script>
+    
 </body>
 </html>
