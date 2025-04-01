@@ -63,8 +63,6 @@ footer {
     opacity: 0.7;
 }
 
-
-
 /* ===== PAGE TRANSITIONS ===== */
 body {
     opacity: 0;
@@ -77,4 +75,15 @@ body.loaded {
 
 html {
     background: #000; /* Prevents white flash */
+}
+
+/* ===== KONAMI CODE FLASH (NEW) ===== */
+@keyframes konami-flash {
+  0% { background: #000; }
+  50% { background: #1a0a2e; } /* Purple-dark flash */
+  100% { background: #000; }
+}
+
+body.konami-activated {
+  animation: konami-flash 1s ease;
 }

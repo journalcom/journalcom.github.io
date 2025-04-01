@@ -32,3 +32,29 @@ if (window.location.pathname.includes("index.html") &&
   document.body.classList.add("loaded");
 }
 localStorage.removeItem('transitioning');
+
+// ===== KONAMI CODE (↑↑↓↓) =====
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown'];
+let konamiIndex = 0;
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === konamiCode[konamiIndex]) {
+    konamiIndex++;
+    if (konamiIndex === konamiCode.length) {
+      // Play audio (relative path to your MP3)
+      const audio = new Audio('audio/stardewvalley.mp3');
+      audio.play().catch(e => console.log("Audio play failed:", e));
+      
+      // Visual feedback
+      document.body.classList.add('konami-activated');
+      setTimeout(() => {
+        document.body.classList.remove('konami-activated');
+      }, 1000);
+      
+      // Reset
+      konamiIndex = 0;
+    }
+  } else {
+    konamiIndex = 0;
+  }
+});

@@ -6,7 +6,6 @@
     <title>404 Not Found</title>
     <link rel="stylesheet" href="style.css">
     <style>
-
         .error-container {
             margin-top: 50px;
             text-align: center;
@@ -19,6 +18,7 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
+            cursor: pointer;
         }
         .error-emoji {
             font-size: 3rem;
@@ -45,6 +45,22 @@
             background: #9c72e6;
             text-decoration: none;
         }
+        .cursor-dot {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #B38AFF;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+        }
+        #youtube-player {
+            display: none;
+            margin: 20px auto;
+            max-width: 300px;
+        }
     </style>
 </head>
 <body>
@@ -65,21 +81,49 @@
             <p>how did we get here? this link does not exist</p>
             <a href="index.html" class="home-link">Return Home</a>
             
-            <!-- Optional: Suggested pages -->
-            <div style="margin-top: 30px;">
-                <p>Try these instead:</p>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="index.html" style="color: #B38AFF;">Home</a></li>
-                    <li><a href="about.html" style="color: #B38AFF;">Contact</a></li>
-                    <li><a href="posts/upcoming.html" style="color: #B38AFF;">Upcoming</a></li>
-                </ul>
+            <div id="youtube-player">
+                <iframe 
+                    width="100%" 
+                    height="180" 
+                    src="https://www.youtube.com/embed/30lgcIzA5QM?autoplay=1&mute=1&enablejsapi=1" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 5px;">Gumball End Credits 🎵</p>
             </div>
+
         </main>
 
         <footer>
             © 2025 Utkarsh Sonawane | All Rights Reserved
         </footer>
     </div>
+
     <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const dot = document.createElement('div');
+            dot.className = 'cursor-dot';
+            dot.style.left = `${e.clientX}px`;
+            dot.style.top = `${e.clientY}px`;
+            dot.style.background = `hsl(${Math.random() * 360}, 80%, 60%)`;
+            document.body.appendChild(dot);
+            setTimeout(() => dot.remove(), 1000);
+        });
+
+        document.querySelector('.error-emoji').addEventListener('click', () => {
+            const player = document.getElementById('youtube-player');
+            player.style.display = player.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html>
+<!-- 
+  ╔════════════════════════════╗
+  ║   Psst... you found me!    ║
+  ║   Email me for a cookie:   ║
+  ║   utkarshsonawane67@gmail  ║
+  ╚════════════════════════════╝
+-->
