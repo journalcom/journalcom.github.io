@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .error-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .error-code {
+            font-size: 5rem;
+            color: #B38AFF;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .error-emoji {
+            font-size: 3rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .error-message {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .home-link {
+            display: inline-block;
+            background: #B38AFF;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .home-link:hover {
+            background: #9c72e6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <header>
+            <nav class="menu">
+                <a href="index.html">home</a>
+                <a href="about.html">contact</a>
+            </nav>
+        </header>
+
+        <main class="error-container">
+            <div class="error-code">
+                404 
+                <span class="error-emoji">😵</span>
+            </div>
+            <div class="error-message">Page not found</div>
+            <p>how did we get here? this link does not exist</p>
+            <a href="index.html" class="home-link">Return Home</a>
+            
+            <!-- Optional: Suggested pages -->
+            <div style="margin-top: 30px;">
+                <p>Try these instead:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="index.html" style="color: #B38AFF;">Home</a></li>
+                    <li><a href="about.html" style="color: #B38AFF;">Contact</a></li>
+                    <li><a href="posts/upcoming.html" style="color: #B38AFF;">Upcoming</a></li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            © 2025 Utkarsh Sonawane | All Rights Reserved
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
