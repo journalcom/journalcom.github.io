@@ -58,3 +58,12 @@ document.addEventListener('keydown', (e) => {
     konamiIndex = 0;
   }
 });
+
+let originalTitle = document.title;
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    document.title = '👀 where did you go';
+    setTimeout(() => document.title = originalTitle, 1500);
+  }
+});
