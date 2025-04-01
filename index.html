@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>journal</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+        .posts-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            padding-left: 40px;
+        }
+        .posts-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .posts-list li {
+            margin-bottom: 8px;
+        }
+
+
+        .welcome-text {
+            font-size: 1.5rem;
+            animation: flyIn 1.2s ease-out forwards;
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        @keyframes flyIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="center-container">
@@ -16,7 +48,7 @@
         </header>
 
         <main>
-            <p>welcome!</p>
+            <p class="welcome-text">welcome!</p>
             <p>hi im utkarsh sonawane, a young high school student in Dubai who spent time playing with coding, tech and life.</p>
             <p>i love writing normal stuff over here, coz why not? maybe one day ill look back on this and cherish these moments.</p>
             <p>apart from this, i love playing chess, exploring new tech and learning about finances</p>
@@ -28,10 +60,12 @@
 
         <div class="section">
             <h2>posts</h2>
-            <ul>
-                <li>[01-04-2025] <a href="posts/bigbang.html">big bang</a></li>
-                <li>[31-03-2025] <a href="posts/spotify_secret.html">a spotify secret</a></li>
-            </ul>
+            <div class="posts-container">
+                <ul class="posts-list">
+                    <li>[01-04-2025] <a href="posts/bigbang.html">big bang</a></li>
+                    <li>[31-03-2025] <a href="posts/spotify_secret.html">a spotify secret</a></li>
+                </ul>
+            </div>
         </div>
 
         <footer>
