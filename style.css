@@ -163,3 +163,20 @@ blockquote {
     background: #1a0a2e;
     border-left: 4px solid #FFD43B;
   }
+
+/* Cookie Rain Animations */
+@keyframes cookieFall {
+    to {
+      top: 120vh;
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes cookieWiggle {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+  }
+  
+  @keyframes cookieFadeOut {
+    to { opacity: 0; transform: scale(0.5); }
+  }

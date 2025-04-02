@@ -116,3 +116,101 @@
       }
     }
   });
+
+  // ===== COOKIE RAIN EASTER EGG =====
+// Type "cookie" to make it rain cookies!
+function setupCookieRain() {
+  const code = ['c', 'o', 'o', 'k', 'i', 'e'];
+  let position = 0;
+  let isRainingCookies = false;
+  const cookies = [];
+  const cookieTypes = ['🍪', '🍩', '🧁', '🎂', '🥠']; // Different cookie variants
+
+  // Listen for keyboard input
+  document.addEventListener('keydown', (e) => {
+    if (e.key.toLowerCase() === code[position]) {
+      position++;
+      if (position === code.length) {
+        toggleCookieRain();
+        position = 0;
+      }
+    } else {
+      position = 0;
+    }
+  });
+
+  function toggleCookieRain() {
+    isRainingCookies = !isRainingCookies;
+    
+    if (isRainingCookies) {
+      startCookieRain();
+      console.log('%c🍪 COOKIE RAIN ACTIVATED! 🍪\nType "cookie" again to stop.', 
+                 'color: #F4A460; font-size: 16px; font-weight: bold;');
+    } else {
+      stopCookieRain();
+    }
+  }
+
+  function startCookieRain() {
+    // Create initial batch of cookies
+    for (let i = 0; i < 20; i++) {
+      setTimeout(() => createCookie(), i * 300);
+    }
+
+    // Keep adding cookies while raining
+    const rainInterval = setInterval(() => {
+      if (!isRainingCookies) {
+        clearInterval(rainInterval);
+        return;
+      }
+      createCookie();
+    }, 500);
+
+    // Play munch sound if available
+    const munchSound = new Audio('audio/cookie-munch.mp3');
+    munchSound.volume = 0.3;
+    munchSound.play().catch(e => console.log("Sound disabled"));
+  }
+
+  function stopCookieRain() {
+    // Remove all cookies
+    cookies.forEach(cookie => {
+      cookie.style.animation = 'cookieFadeOut 0.5s forwards';
+      setTimeout(() => cookie.remove(), 500);
+    });
+    cookies.length = 0;
+  }
+
+  function createCookie() {
+    const cookie = document.createElement('div');
+    const cookieType = cookieTypes[Math.floor(Math.random() * cookieTypes.length)];
+    
+    cookie.textContent = cookieType;
+    cookie.style.cssText = `
+      position: fixed;
+      font-size: ${24 + Math.random() * 30}px;
+      left: ${Math.random() * 100}vw;
+      top: -50px;
+      z-index: 9999;
+      pointer-events: none;
+      animation: 
+        cookieFall ${3 + Math.random() * 4}s linear forwards,
+        cookieWiggle ${1 + Math.random() * 2}s ease-in-out infinite;
+      transform-origin: center;
+    `;
+
+    document.body.appendChild(cookie);
+    cookies.push(cookie);
+
+    // Remove cookie after animation completes
+    setTimeout(() => {
+      if (cookie.parentNode) {
+        cookie.remove();
+        cookies.splice(cookies.indexOf(cookie), 1);
+      }
+    }, 7000);
+  }
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', setupCookieRain);
