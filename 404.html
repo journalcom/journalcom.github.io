@@ -74,8 +74,6 @@
         <header>
             <nav class="menu">
                 <a href="index.html">home</a>
-                <a href="posts.html">posts</a>
-                <a href="quotes.html">quotes</a>
                 <a href="about.html">contact</a>
             </nav>
         </header>
@@ -86,7 +84,7 @@
                 <span class="error-emoji">😵</span>
             </div>
             <div class="error-message">Page not found</div>
-            <img src="images/404error.jpg" class="journal-image" alt="404 error illustration">
+            <img src="../images/404error.jpg" class="journal-image">
             <a href="index.html" class="home-link">Return Home</a>
             
             <div class="audio-indicator" id="audio-status" style="display: none;">
@@ -102,11 +100,6 @@
     <script src="script.js"></script>
     
     <script>
-        // Ensure page transitions work
-        document.addEventListener("DOMContentLoaded", () => {
-            document.body.classList.add("loaded");
-        });
-
         // Cursor trail effect
         document.addEventListener('mousemove', (e) => {
             const dot = document.createElement('div');
@@ -119,7 +112,7 @@
         });
 
         // Audio player for Gumball theme
-        const gumballAudio = new Audio('audio/gumball.mp3');
+        const gumballAudio = new Audio('../audio/gumball.mp3');
         let isPlaying = false;
         
         document.querySelector('.error-emoji').addEventListener('click', () => {
