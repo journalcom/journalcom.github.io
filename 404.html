@@ -6,15 +6,6 @@
     <title>404 Not Found</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            opacity: 0;
-            transition: opacity 0.4s ease-out;
-            background: #000;
-            color: #DBDBDB;
-        }
-        body.loaded {
-            opacity: 1;
-        }
         .error-container {
             margin-top: 50px;
             text-align: center;
@@ -111,11 +102,12 @@
     <script src="script.js"></script>
     
     <script>
-        // Force show content if transitions fail
-        setTimeout(() => {
-            document.body.classList.add('loaded');
-        }, 500);
+        // Ensure page transitions work
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add("loaded");
+        });
 
+        // Cursor trail effect
         document.addEventListener('mousemove', (e) => {
             const dot = document.createElement('div');
             dot.className = 'cursor-dot';
@@ -126,6 +118,7 @@
             setTimeout(() => dot.remove(), 1000);
         });
 
+        // Audio player for Gumball theme
         const gumballAudio = new Audio('audio/gumball.mp3');
         let isPlaying = false;
         
@@ -153,6 +146,7 @@
             isPlaying = !isPlaying;
         });
 
+        // Handle audio auto-pause when tab is inactive
         document.addEventListener('visibilitychange', () => {
             if (document.hidden) {
                 gumballAudio.pause();
@@ -160,11 +154,13 @@
                 document.getElementById('audio-status').style.display = 'none';
             }
         });
-
-        // Initialize page transition
-        document.addEventListener("DOMContentLoaded", () => {
-            document.body.classList.add("loaded");
-        });
     </script>
 </body>
 </html>
+<!-- 
+  ╔════════════════════════════╗
+  ║   Psst... you found me!    ║
+  ║   email me for a cookie:   ║
+  ║   utkarshsonawane67@gmail  ║
+  ╚════════════════════════════╝
+-->
