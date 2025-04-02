@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Not Found</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <style>
         .error-container {
             margin-top: 50px;
@@ -73,8 +73,10 @@
     <div class="center-container">
         <header>
             <nav class="menu">
-                <a href="index.html">home</a>
-                <a href="about.html">contact</a>
+                <a href="/index.html">home</a>
+                <a href="/posts.html">posts</a>
+                <a href="/quotes.html">quotes</a>
+                <a href="/about.html">contact</a>
             </nav>
         </header>
 
@@ -84,8 +86,8 @@
                 <span class="error-emoji">😵</span>
             </div>
             <div class="error-message">Page not found</div>
-            <img src="../images/404error.jpg" class="journal-image">
-            <a href="index.html" class="home-link">Return Home</a>
+            <img src="/images/404error.jpg" class="journal-image" alt="404 error illustration">
+            <a href="/index.html" class="home-link">Return Home</a>
             
             <div class="audio-indicator" id="audio-status" style="display: none;">
                 🎵 Gumball theme playing...
@@ -97,7 +99,7 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
     
     <script>
         // Cursor trail effect
@@ -112,7 +114,7 @@
         });
 
         // Audio player for Gumball theme
-        const gumballAudio = new Audio('../audio/gumball.mp3');
+        const gumballAudio = new Audio('/audio/gumball.mp3');
         let isPlaying = false;
         
         document.querySelector('.error-emoji').addEventListener('click', () => {
