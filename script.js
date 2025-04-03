@@ -1,14 +1,11 @@
 // ===== PAGE TRANSITIONS =====
 document.addEventListener("DOMContentLoaded", () => {
-  // Always show content immediately
   document.body.classList.add("loaded");
   
-  // Clear transition state when returning to homepage
   if (window.performance && performance.navigation.type === 2) {
     localStorage.removeItem('transitioning');
   }
 
-  // ===== KONAMI CODE (↑↑↓↓) =====
   const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown'];
   let konamiIndex = 0;
 
@@ -16,10 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === konamiCode[konamiIndex]) {
       konamiIndex++;
       if (konamiIndex === konamiCode.length) {
-        // Play audio
         new Audio('audio/stardewvalley.mp3').play().catch(console.error);
         
-        // Visual feedback
         document.body.classList.add('konami-activated');
         setTimeout(() => {
           document.body.classList.remove('konami-activated');
@@ -32,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ===== TAB VISIBILITY =====
   const originalTitle = document.title;
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
@@ -41,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ===== BLOCKQUOTE EFFECTS =====
   document.querySelectorAll('blockquote').forEach(quote => {
     // Double-click to highlight
     quote.addEventListener('dblclick', () => {
@@ -49,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       quote.style.boxShadow = '0 0 25px #B38AFF';
       quote.style.transform = 'scale(1.02)';
       
-      // Add crown to personal quotes
       if (quote.querySelector('footer').textContent.includes('utkarsh')) {
         const crown = document.createElement('span');
         crown.innerHTML = '👑';
@@ -64,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 2000);
     });
     
-    // Hover effects
+
     quote.addEventListener('mouseenter', () => {
       quote.style.borderLeft = '4px solid #9c72e6';
     });
@@ -73,14 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ===== FAVORITE QUOTES =====
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'f' && document.querySelector('blockquote:hover')) {
       document.querySelector('blockquote:hover').classList.toggle('favorited');
     }
   });
 
-  // ===== COOKIE RAIN =====
   const cookieTypes = ['🍪', '🍩', '🧁', '🎂', '🥠', '🍬', '🍫'];
   const cookies = [];
   let isRainingCookies = false;
@@ -124,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cookies.length = 0;
   }
 
-  // Cookie activation
   let keySequence = [];
   document.addEventListener('keydown', (e) => {
     keySequence.push(e.key.toLowerCase());
